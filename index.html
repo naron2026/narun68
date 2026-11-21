@@ -1,102 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Fonts: Inter & Playfair Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body class="show">
-    
-    <aside id="top-bar">
-      <div class="container">
-        <p>
-          <span class="spring-sale">Spring Sale</span> Complimentary worldwide
-          shipping on all orders over $75
-        </p>
-        <p class="promotion">Use code MINIMAL26 for 15% off</p>
-      </div>
-    </aside>
-    <header id="header">
-      <div class="container">
-        <nav>
-          <p class="brand-logo">AURA <span class="dot">.</span></p>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Category</a></li>
-            <li><a href="">Feature Shop</a></li>
-            <li><a href="">Why Us</a></li>
-            <li><a href="">Special Promotion</a></li>
-          </ul>
-          <div class="nav-actions">
-            <form action="">
-              <i class="fa fa-search"></i>
-              <input
-                type="text"
-                name="search"
-                id="search"
-                placeholder="Search essentials..."
-              />
-            </form>
-            <a href="" class="badget icon-favorite"
-              ><i class="fa-regular fa-heart"></i
-            ></a>
-            <a href="" class="badget icon-bag"
-              ><i class="fa fa-shopping-bag"></i
-            ></a>
-          </div>
-        </nav>
-      </div>
-      <div id="shopping-cart">
-        <div class="cart-header">
-          <p>Your Bag (0)</p>
-          <i class="fa fa-close"></i>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body class="show">
+
+  <aside id="top-bar">
+    <div class="container">
+      <p>
+        <span class="spring-sale">Spring Sale</span> Complimentary worldwide
+        shipping on all orders over $75
+        &#x2192;
+      </p>
+      <p class="promotion">Use code MINIMAL26 for 15% off</p>
+    </div>
+  </aside>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <p class="brand-logo">AURA <span class="dot">.</span></p>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Category</a></li>
+          <li><a href="">Feature Shop</a></li>
+          <li><a href="">Why Us</a></li>
+          <li><a href="">Special Promotion</a></li>
+        </ul>
+        <div class="nav-actions">
+          <form action="">
+            <i class="fa fa-search"></i>
+            <input type="text" name="search" id="search" placeholder="Search essentials..." />
+          </form>
+          <a href="" class="badget icon-favorite"><i class="fa-regular fa-heart"></i></a>
+          <a href="" class="badget icon-bag"><i class="fa fa-shopping-bag"></i></a>
         </div>
-        <div class="cart-body">
-          <div>
-            <p class="empty-cart"><i class="fa fa-shopping-cart"></i> Nothing in cart yet</p>
-          </div>
-        </div>
-        <div class="cart-footer">
-          <div class="subtotal">
-            <p>Sutotal</p>
-            <p>$0.00</p>
-          </div>
-          <p class="tax-shipping">Tax & shipping calculated at checkout!</p>
-          <button>Proceed to Checkout -></button>
+      </nav>
+    </div>
+    <div id="shopping-cart">
+      <div class="cart-header">
+        <p>Your Bag (0)</p>
+        <i class="fa fa-close"></i>
+      </div>
+      <div class="cart-body">
+        <div>
+          <p class="empty-cart"><i class="fa fa-shopping-cart"></i> Nothing in cart yet</p>
         </div>
       </div>
-    </header>
-    <div class="overlay"></div>
+      <div class="cart-footer">
+        <div class="subtotal">
+          <p>Sutotal</p>
+          <p>$0.00</p>
+        </div>
+        <p class="tax-shipping">Tax & shipping calculated at checkout!</p>
+        <button>Proceed to Checkout -></button>
+      </div>
+    </div>
+  </header>
+  <div class="overlay"></div>
 
-    <script>
-      const closeBtn = document.querySelector("#header i.fa-close");
-      const body = document.querySelector('body');
-      const shoppingBag = document.querySelector('#header .badget.icon-bag');
+  <script>
+    const closeBtn = document.querySelector("#header i.fa-close");
+    const body = document.querySelector('body');
+    const shoppingBag = document.querySelector('#header .badget.icon-bag');
 
-      shoppingBag.addEventListener('click', function(e){
-        e.preventDefault();
-        body.classList.add('show');
-      })
+    shoppingBag.addEventListener('click', function (e) {
+      e.preventDefault();
+      // add console
+      console.log('hello javascript');
+      body.classList.add('show');
+    })
 
-      closeBtn.addEventListener('click', function(e){
-        body.classList.remove('show');
-      })
-    </script>
+    closeBtn.addEventListener('click', function (e) {
+      body.classList.remove('show');
+    })
+  </script>
 
-  </body>
+</body>
+
 </html>
